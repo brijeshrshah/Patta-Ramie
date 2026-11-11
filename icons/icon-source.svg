@@ -1,0 +1,18 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <pattern id="diamonds" width="46" height="46" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="46" height="46" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="2"/>
+    </pattern>
+  </defs>
+
+  <rect width="512" height="512" rx="104" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="104" fill="url(#diamonds)"/>
+  <rect x="18" y="18" width="476" height="476" rx="90" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="7"/>
+
+  <text x="256" y="336" font-family="Georgia, 'Times New Roman', serif" font-size="292" font-weight="700" fill="#ffffff" text-anchor="middle">D</text>
+  <text x="256" y="418" font-family="Arial, sans-serif" font-size="80" fill="#f87171" text-anchor="middle">&#9830;</text>
+</svg>

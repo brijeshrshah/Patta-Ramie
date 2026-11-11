@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Satyu</title>
+  <meta name="description" content="Satyu — a 4-player partnership trump trick-taking card game." />
+  <link rel="icon" href="../icons/favicon-32.png" sizes="32x32" type="image/png" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <a class="back-link" href="../index.html">&larr; Back to Games</a>
+    <header class="hero">
+      <h1>Satyu</h1>
+      <p>A 4-player partnership trump trick-taking game with a full 52-card deck. Opposite players are partners &mdash; your pair must win 7 of the 13 hands.</p>
+    </header>
+
+    <section class="setup-panel" id="setupPanel">
+      <div class="name-inputs" id="nameInputs">
+        <label class="name-input">Player 1 Name (partner of Player 3)<input type="text" id="nameInput0" maxlength="16" placeholder="Player 1" /></label>
+        <label class="name-input">Player 2 Name (partner of Player 4)<input type="text" id="nameInput1" maxlength="16" placeholder="Player 2" /></label>
+        <label class="name-input">Player 3 Name (partner of Player 1)<input type="text" id="nameInput2" maxlength="16" placeholder="Player 3" /></label>
+        <label class="name-input">Player 4 Name (partner of Player 2)<input type="text" id="nameInput3" maxlength="16" placeholder="Player 4" /></label>
+      </div>
+      <button id="startBtn">Start Game</button>
+    </section>
+
+    <section class="game-panel hidden" id="gamePanel">
+      <div class="top-bar">
+        <div class="round-label" id="roundLabel">Round 1</div>
+        <button id="exitBtn" class="exit-btn">Exit to Home</button>
+      </div>
+
+      <div class="turn-banner" id="turnBanner">&mdash;</div>
+      <div class="trump-badge hidden" id="trumpBadge"></div>
+
+      <div class="status-board" id="statusBoard"></div>
+
+      <div class="trump-panel hidden" id="trumpPanel">
+        <p id="trumpPrompt">Choose the Supreme Suit</p>
+        <div class="suit-choices" id="suitChoices">
+          <button class="suit-btn" data-suit="&#9824;">&#9824;</button>
+          <button class="suit-btn red" data-suit="&#9829;">&#9829;</button>
+          <button class="suit-btn red" data-suit="&#9830;">&#9830;</button>
+          <button class="suit-btn" data-suit="&#9827;">&#9827;</button>
+        </div>
+      </div>
+
+      <div class="hand-gate hidden" id="handGate">
+        <p id="gateText">Pass the device</p>
+        <button id="gateRevealBtn">Tap to Reveal Hand</button>
+      </div>
+
+      <div class="trick-area" id="trickArea"></div>
+
+      <div class="hand-area hidden" id="handArea">
+        <p class="follow-hint" id="followHint"></p>
+        <div class="hand-fan" id="handFan"></div>
+      </div>
+
+      <div class="round-end hidden" id="roundEnd">
+        <h2>Round Complete</h2>
+        <div id="roundSummary"></div>
+        <p id="nextDealerNote" class="next-dealer-note"></p>
+        <button id="nextRoundBtn">Start Next Round</button>
+        <button id="resetCounterBtn" class="exit-btn">Reset Win Counter</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

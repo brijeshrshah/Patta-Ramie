@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Dhaglabaji</title>
+  <meta name="description" content="Dhaglabaji — a pass-and-play card collecting game for 2-4 players." />
+  <link rel="icon" href="../icons/favicon-32.png" sizes="32x32" type="image/png" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <a class="back-link" href="../index.html">&larr; Back to Games</a>
+    <header class="hero">
+      <h1>Dhaglabaji</h1>
+      <p>Flip your top card each turn. Match the last card played to sweep the whole table into your hand.</p>
+    </header>
+
+    <section class="setup-panel" id="setupPanel">
+      <label class="player-select">
+        Players
+        <select id="playerCount">
+          <option value="1">1 (You vs Computer)</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </label>
+      <label class="player-select">
+        Match Rule
+        <select id="matchRule">
+          <option value="either" selected>Number or Suit (either)</option>
+          <option value="number">Number only</option>
+          <option value="suit">Suit only</option>
+        </select>
+      </label>
+      <div class="name-inputs" id="nameInputs"></div>
+      <button id="startBtn">Deal Cards</button>
+    </section>
+
+    <section class="game-panel hidden" id="gamePanel">
+      <div class="top-bar">
+        <button id="exitBtn" class="exit-btn">Exit to Home</button>
+      </div>
+
+      <div class="turn-banner" id="turnBanner">Player 1's turn</div>
+
+      <div class="table-ring" id="tableRing">
+        <div class="center-zone">
+          <div class="open-cross" id="openCross"></div>
+          <div class="pile-count" id="pileCount"></div>
+        </div>
+      </div>
+
+      <div class="winner-banner hidden" id="winnerBanner"></div>
+
+      <div class="log-panel">
+        <h2>Activity</h2>
+        <ul id="log"></ul>
+      </div>
+
+      <button id="newGameBtn" class="hidden">New Game</button>
+    </section>
+
+    <footer class="footer">
+      <p>Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

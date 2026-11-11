@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>SattiAththi</title>
+  <meta name="description" content="SattiAththi — a 2-player trump trick-taking card game." />
+  <link rel="icon" href="../icons/favicon-32.png" sizes="32x32" type="image/png" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <a class="back-link" href="../index.html">&larr; Back to Games</a>
+    <header class="hero">
+      <h1>SattiAththi</h1>
+      <p>A 2-player trump trick-taking game, same rules as DoTinPanch. One seat targets 7 hands, the other targets 8 &mdash; beat, meet, or miss it. Play against another person or the computer.</p>
+    </header>
+
+    <section class="setup-panel" id="setupPanel">
+      <label class="player-select">
+        Players
+        <select id="playerCount">
+          <option value="1">1 (You vs Computer)</option>
+          <option value="2" selected>2</option>
+        </select>
+      </label>
+      <div class="name-inputs" id="nameInputs"></div>
+      <button id="startBtn">Start Game</button>
+    </section>
+
+    <section class="game-panel hidden" id="gamePanel">
+      <div class="top-bar">
+        <div class="round-label" id="roundLabel">Round 1</div>
+        <button id="exitBtn" class="exit-btn">Exit to Home</button>
+      </div>
+
+      <div class="turn-banner" id="turnBanner">&mdash;</div>
+      <div class="trump-badge hidden" id="trumpBadge"></div>
+
+      <div class="status-board" id="statusBoard"></div>
+
+      <div class="trump-panel hidden" id="trumpPanel">
+        <p id="trumpPrompt">Choose the Supreme Suit</p>
+        <div class="suit-choices" id="suitChoices">
+          <button class="suit-btn" data-suit="&#9824;">&#9824;</button>
+          <button class="suit-btn red" data-suit="&#9829;">&#9829;</button>
+          <button class="suit-btn red" data-suit="&#9830;">&#9830;</button>
+          <button class="suit-btn" data-suit="&#9827;">&#9827;</button>
+        </div>
+      </div>
+
+      <div class="hand-gate hidden" id="handGate">
+        <p id="gateText">Pass the device</p>
+        <button id="gateRevealBtn">Tap to Reveal Hand</button>
+      </div>
+
+      <div class="trick-area" id="trickArea"></div>
+
+      <div class="hand-area hidden" id="handArea">
+        <p class="follow-hint" id="followHint"></p>
+        <div class="hand-fan" id="handFan"></div>
+      </div>
+
+      <div class="round-end hidden" id="roundEnd">
+        <h2>Round Complete</h2>
+        <div id="roundSummary"></div>
+        <button id="nextRoundBtn">Start Next Round</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
