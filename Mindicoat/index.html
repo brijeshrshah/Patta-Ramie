@@ -40,35 +40,39 @@
       <div class="turn-banner" id="turnBanner">&mdash;</div>
       <div class="trump-badge hidden" id="trumpBadge"></div>
 
-      <div class="trump-panel hidden" id="trumpPanel">
-        <p id="trumpPrompt">Choose the Supreme Suit</p>
-        <div class="suit-choices" id="suitChoices">
-          <button class="suit-btn" data-suit="&#9824;">&#9824;</button>
-          <button class="suit-btn red" data-suit="&#9829;">&#9829;</button>
-          <button class="suit-btn red" data-suit="&#9830;">&#9830;</button>
-          <button class="suit-btn" data-suit="&#9827;">&#9827;</button>
-        </div>
-      </div>
-
-      <div class="hand-gate hidden" id="handGate">
-        <p id="gateText">Pass the device</p>
-        <button id="gateRevealBtn">Tap to Reveal Hand</button>
-      </div>
-
-      <div class="hand-area hidden" id="handArea">
-        <p class="follow-hint" id="followHint"></p>
-        <div class="hand-fan" id="handFan"></div>
-      </div>
-
       <div class="table-wrap">
-        <div class="table" id="table">
-          <div class="seat" id="seat2"></div>
-          <div class="seat" id="seat1"></div>
-          <div class="seat" id="seat3"></div>
-          <div class="seat" id="seat0"></div>
-          <div class="trick-area" id="trickArea"></div>
+        <div class="table-stage">
+          <div class="table" id="table">
+            <div class="seat" id="seat2"></div>
+            <div class="seat" id="seat1"></div>
+            <div class="seat" id="seat3"></div>
+            <div class="seat" id="seat0"></div>
+            <div class="trick-area" id="trickArea"></div>
+          </div>
+          <div class="status-board" id="statusBoard"></div>
         </div>
-        <div class="status-board" id="statusBoard"></div>
+
+        <div class="player-controls">
+          <div class="trump-panel hidden" id="trumpPanel">
+            <p id="trumpPrompt">Choose the Supreme Suit</p>
+            <div class="suit-choices" id="suitChoices">
+              <button class="suit-btn" data-suit="&#9824;">&#9824;</button>
+              <button class="suit-btn red" data-suit="&#9829;">&#9829;</button>
+              <button class="suit-btn red" data-suit="&#9830;">&#9830;</button>
+              <button class="suit-btn" data-suit="&#9827;">&#9827;</button>
+            </div>
+          </div>
+
+          <div class="hand-gate hidden" id="handGate">
+            <p id="gateText">Pass the device</p>
+            <button id="gateRevealBtn">Tap to Reveal Hand</button>
+          </div>
+
+          <div class="hand-area hidden" id="handArea">
+            <p class="follow-hint" id="followHint"></p>
+            <div class="hand-fan" id="handFan"></div>
+          </div>
+        </div>
       </div>
 
       <div class="score-actions">
