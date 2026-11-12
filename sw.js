@@ -1,4 +1,4 @@
-const CACHE_NAME = 'patta-ramie-v9';
+const CACHE_NAME = 'patta-ramie-v10';
 const ASSETS = [
   './',
   './index.html',
