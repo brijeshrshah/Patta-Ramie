@@ -726,3 +726,32 @@ body {
   justify-content: center;
   margin: 0 0 1rem;
 }
+
+/* Supreme Suit chooser opens on the table, above Player 1. */
+.table .trump-panel {
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  transform: translateX(-50%);
+  z-index: 4;
+  margin: 0;
+  padding: 0.6rem 0.9rem;
+  width: max-content;
+  max-width: 92%;
+  background: rgba(15, 23, 42, 0.92);
+  border: 2px solid #c9a227;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.table .trump-panel p {
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.table .suit-btn {
+  width: 44px;
+  height: 44px;
+  font-size: 1.3rem;
+}
+
+.table .suit-choices { gap: 0.5rem; }
